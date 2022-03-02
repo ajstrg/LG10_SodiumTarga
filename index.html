@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  
+	<head>
+
+		<title> LG 10.1 [Sodium Targa] </title>
+
+		<meta charset="UTF-8">
+		<meta name="author" content="Anika Justine Targa">
+		<meta name="keywords" content="HTML, CSS, JS">
+		<meta name="revised" content="02-03-2022">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	</head>
+  
+	<body>
+
+		<script>
+	  
+		function aCheck ()
+		{
+			let a = prompt("Enter the measurement of the first side:","0");
+
+			if (a <= 0 || isNaN(a))
+			{
+				window.alert("Invalid input. The measurement must be a positive integer.");
+				aCheck();
+			}
+
+			else
+			{
+				return a;
+			}
+		}
+	  
+		function bCheck ()
+		{
+			let b = prompt("Enter the measurement of the second side:","0");
+
+			if (b <= 0 || isNaN(b))
+			{
+				window.alert("Invalid input. The measurement must be a positive integer.");
+				bCheck();
+			}
+
+			else
+			{
+				return b;
+			}
+		}	  
+
+		function cCheck ()
+		{
+			let c = prompt("Enter the measurement of the third side:","0");
+
+			if (c <= 0 || isNaN(c))
+			{
+				window.alert("Invalid input. The measurement must be a positive integer.");
+				cCheck();
+			}
+
+			else
+			{
+				return c;
+			}
+		}	  
+		 
+		function determineTriangle(a,b,c)
+		{
+
+			let x = aCheck(a);
+			let y = bCheck(b);
+			let z = cCheck(c);
+
+			if (x == y && y == z)
+			{
+				window.alert("The triangle is EQUILATERAL");
+			}
+
+			else if (x == y || x == z || y == z)
+			{
+				window.alert("The triangle is ISOCELES");
+			}
+
+			else if (x != y && y != z && x != z)
+			{
+				window.alert("The triangle is SCALENE");
+			}
+
+			else {};
+
+		}
+
+		determineTriangle();
+
+		</script>
+	</body>
+</html>
